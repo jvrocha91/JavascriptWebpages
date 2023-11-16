@@ -1,0 +1,33 @@
+function calcMedia() {
+    return (this.notas[0] + this.notas[1]) / 2;
+}
+
+var passou = function() {
+    if (this.media() >= 5) {
+        return "Aprovado";
+    } else {
+        return "Reprovado";
+    }
+}
+
+var aluno = {
+    nome: "Mauro",
+    notas: [7, 8],
+    media: calcMedia,
+    situacao: passou
+};
+
+var aluno1 = {
+    nome: "Maria",
+    notas: [4, 10],
+    media: calcMedia,
+    situacao: passou
+}
+
+console.log(aluno.nome);
+console.log(aluno.media());
+console.log(aluno.situacao());
+
+console.log(aluno1.nome);
+console.log(aluno1.media());
+console.log(aluno1.situacao());
